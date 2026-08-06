@@ -119,6 +119,35 @@
     'food-toro-4':       'sashimi',
     'food-unidon-5':     'bento',
 
+    // ── Properti: Rumah Mewah ──────────────────────────────────
+    'prop-rumah-1':      'prop-rumah-1',
+    'prop-rumah-2':      'prop-rumah-1',
+    'prop-rumah-3':      'prop-rumah-1',
+    'prop-rumah-4':      'prop-rumah-1',
+    'prop-rumah-5':      'prop-rumah-5',
+
+    // ── Properti: Villa & Resort ───────────────────────────────
+    'prop-villa-1':      'prop-villa-1',
+    'prop-villa-2':      'prop-villa-1',
+    'prop-villa-3':      'prop-villa-4',
+    'prop-villa-4':      'prop-villa-4',
+
+    // ── Properti: Apartemen ────────────────────────────────────
+    'prop-apt-1':        'prop-apt-1',
+    'prop-apt-2':        'prop-apt-2',
+    'prop-apt-3':        'prop-apt-3',
+    'prop-apt-4':        'prop-apt-4',
+
+    // ── Properti: Tanah Kavling ────────────────────────────────
+    'prop-tanah-1':      'prop-tanah-1',
+    'prop-tanah-2':      'prop-tanah-1',
+    'prop-tanah-3':      'prop-tanah-1',
+
+    // ── Properti: Komersial ────────────────────────────────────
+    'prop-komersial-1':  'prop-komersial-1',
+    'prop-komersial-2':  'prop-apt-1',
+    'prop-komersial-3':  'prop-villa-1',
+
     // ── Dessert ────────────────────────────────────────────────
     'food-choco-1':      'chocolate',
     'food-opera-2':      'cake',

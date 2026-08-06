@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS categories (
   id            INTEGER PRIMARY KEY AUTOINCREMENT,
   name          TEXT NOT NULL,
   slug          TEXT NOT NULL UNIQUE,
-  type          TEXT NOT NULL CHECK(type IN ('luxury','food')),
+  type          TEXT NOT NULL CHECK(type IN ('luxury','food','property')),
   icon          TEXT DEFAULT '🏷',
   description   TEXT,
   product_count INTEGER DEFAULT 0,
