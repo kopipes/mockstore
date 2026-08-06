@@ -84,6 +84,7 @@
     'cloth-trench-4':   '1566150905458-1bf1fc113f0d', // coat
     'cloth-denim-5':    '1566150905458-1bf1fc113f0d', // denim
     'cloth-linen-6':    '1548036328-c9fa89d128fa',  // linen shirt
+  };
 
   // Gallery variants — crop offsets for 4 different views
   const VARIANTS = [
