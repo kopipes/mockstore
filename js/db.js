@@ -18,8 +18,8 @@
           `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/${file}`
       });
 
-      const resp = await fetch('data/mockstore.sqlite');
-      if (!resp.ok) throw new Error('Gagal memuat database produk.');
+      const resp = await fetch('data/mockstore.sqlite?v=3');
+      if (!resp.ok) throw new Error('Gagal memuat database produk. Status: ' + resp.status);
       const buf = await resp.arrayBuffer();
       _db = new SQL.Database(new Uint8Array(buf));
       _ready = true;
