@@ -7,15 +7,26 @@
   let _ready = false;
   const _queue = [];
 
+  const SQLJS_VERSION = '1.10.3';
+  const SQLJS_CDN = `https://cdnjs.cloudflare.com/ajax/libs/sql.js/${SQLJS_VERSION}`;
+
   /* ---- Bootstrap ---- */
   async function init() {
+    // Timeout safety — if DB not ready in 20s, show error
+    const timeout = setTimeout(() => {
+      if (!_ready) {
+        window.dispatchEvent(new CustomEvent('db:error', {
+          detail: 'Timeout memuat database (20 detik). Coba refresh halaman.'
+        }));
+      }
+    }, 20000);
+
     try {
-      // Load sql.js from CDN (pinned version)
-      await loadScript('https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/sql-wasm.min.js');
+      // Load sql.js from CDN
+      await loadScript(`${SQLJS_CDN}/sql-wasm.min.js`);
 
       const SQL = await initSqlJs({
-        locateFile: file =>
-          `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/${file}`
+        locateFile: file => `${SQLJS_CDN}/${file}`
       });
 
       const resp = await fetch('data/mockstore.sqlite?v=3');
@@ -23,6 +34,7 @@
       const buf = await resp.arrayBuffer();
       _db = new SQL.Database(new Uint8Array(buf));
       _ready = true;
+      clearTimeout(timeout);
 
       // Flush queue
       _queue.forEach(fn => fn(_db));
@@ -30,6 +42,7 @@
 
       window.dispatchEvent(new Event('db:ready'));
     } catch (err) {
+      clearTimeout(timeout);
       console.error('[MockDB]', err);
       window.dispatchEvent(new CustomEvent('db:error', { detail: err.message }));
     }
@@ -37,11 +50,15 @@
 
   function loadScript(src) {
     return new Promise((resolve, reject) => {
-      if (document.querySelector(`script[src="${src}"]`)) return resolve();
+      // Check by partial src match to handle query string differences
+      const existing = Array.from(document.querySelectorAll('script')).find(s =>
+        s.src && s.src.includes('sql-wasm.min.js')
+      );
+      if (existing) return resolve();
       const s = document.createElement('script');
       s.src = src;
       s.onload = resolve;
-      s.onerror = () => reject(new Error(`Gagal load script: ${src}`));
+      s.onerror = () => reject(new Error(`Gagal load sql.js dari CDN. Periksa koneksi internet.`));
       document.head.appendChild(s);
     });
   }
