@@ -74,6 +74,7 @@
     let titleText = 'Semua Produk';
     if (categorySlug === 'luxury') titleText = '✨ Luxury Goods';
     else if (categorySlug === 'food') titleText = '🍽 Premium Food';
+    else if (categorySlug === 'property') titleText = '🏠 Properti Premium';
     else {
       const cat = MockDB.getCategoryBySlug(categorySlug);
       if (cat) titleText = cat.name;
@@ -97,7 +98,7 @@
     const allCats = MockDB.getCategories();
     const chipsEl = document.getElementById('category-chips');
     if (chipsEl) {
-      const typeFilter = (categorySlug === 'luxury' || categorySlug === 'food') ? categorySlug : null;
+      const typeFilter = (categorySlug === 'luxury' || categorySlug === 'food' || categorySlug === 'property') ? categorySlug : null;
       const filtered = typeFilter ? allCats.filter(c => c.type === typeFilter) : allCats;
       const parentSlug = categorySlug;
       chipsEl.innerHTML = `

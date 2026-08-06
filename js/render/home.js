@@ -17,10 +17,11 @@
             <div class="hero__cta">
               <a href="#/listing/luxury" class="btn btn--primary btn--lg">✨ Luxury Goods</a>
               <a href="#/listing/food" class="btn btn--outline btn--lg">🍽 Premium Food</a>
+              <a href="#/listing/property" class="btn btn--outline btn--lg">🏠 Properti</a>
             </div>
             <div class="hero__stats">
               <div class="hero__stat">
-                <span class="hero__stat-num">35+</span>
+                <span class="hero__stat-num">100+</span>
                 <span class="hero__stat-label">Produk Premium</span>
               </div>
               <div class="hero__stat-divider"></div>
@@ -129,6 +130,14 @@
               <span class="btn btn--outline btn--sm">Pesan Sekarang</span>
             </div>
           </a>
+          <a href="#/listing/property" class="home-banner home-banner--property">
+            <div class="home-banner__content">
+              <span class="home-banner__label">Real Estate</span>
+              <h3>Properti Premium</h3>
+              <p>Rumah, villa, apartemen, dan tanah</p>
+              <span class="btn btn--outline btn--sm">Lihat Properti</span>
+            </div>
+          </a>
         </div>
       </section>
 
@@ -140,6 +149,17 @@
         </div>
         <div class="product-grid">
           ${MockDB.getProducts({ categorySlug: 'food', limit: 4 }).map(p => renderProductCard(p)).join('')}
+        </div>
+      </section>
+
+      <!-- PROPERTY SECTION -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">🏠 Properti Premium</h2>
+          <a href="#/listing/property" class="see-all-link">Lihat semua →</a>
+        </div>
+        <div class="product-grid">
+          ${MockDB.getProducts({ categorySlug: 'property', limit: 4 }).map(p => renderProductCard(p)).join('')}
         </div>
       </section>
 
