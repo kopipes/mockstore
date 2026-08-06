@@ -59,35 +59,6 @@ ul, ol {
   list-style: none;
 }
 
-/* ============ ONLINE COUNTER BAR ============ */
-.online-bar {
-  background: #0f172a;
-  color: rgba(255,255,255,0.85);
-  text-align: center;
-  padding: 0.35rem 1rem;
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  position: relative;
-  z-index: 1001;
-}
-
-.online-bar__dot {
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  background: #22c55e;
-  border-radius: 50%;
-  margin-right: 0.4rem;
-  vertical-align: middle;
-  animation: pulse-dot 2s ease-in-out infinite;
-}
-
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.6; transform: scale(1.3); }
-}
-
 /* ============ CONTAINER ============ */
 .container {
   width: 100%;
