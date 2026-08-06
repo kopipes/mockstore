@@ -72,15 +72,15 @@
   }
 
   /* ---- Init ---- */
-  function init() {
-    // Expose helpers globally
-    window.MockFmt = fmt;
-    window.MockStars = stars;
-    window.MockSlugify = slugify;
-    window.MockImgUrl = imgUrl;
-    window.MockRenderPage = renderPage;
-    window.MockShowError = showError;
+  // Expose helpers globally immediately (not inside DOMContentLoaded)
+  window.MockFmt = fmt;
+  window.MockStars = stars;
+  window.MockSlugify = slugify;
+  window.MockImgUrl = imgUrl;
+  window.MockRenderPage = renderPage;
+  window.MockShowError = showError;
 
+  function init() {
     // Hash routing
     window.addEventListener('hashchange', route);
 
