@@ -191,6 +191,10 @@
   .home-banners { grid-template-columns: 1fr 1fr; }
 }
 
+@media (min-width: 1024px) {
+  .home-banners { grid-template-columns: 1fr 1fr 1fr; }
+}
+
 .home-banner {
   border-radius: var(--card-radius);
   padding: 2rem;
@@ -211,6 +215,11 @@
 
 .home-banner--luxury {
   background: linear-gradient(135deg, #1a0533 0%, #4c1d95 100%);
+  color: #fff;
+}
+
+.home-banner--food {
+  background: linear-gradient(135deg, #052e16 0%, #166534 100%);
   color: #fff;
 }
 
