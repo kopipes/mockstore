@@ -4,22 +4,63 @@
   function render() {
     MockRenderPage(`
       <section class="hero">
+        <div class="hero__bg-shapes" aria-hidden="true">
+          <div class="hero__shape hero__shape--1"></div>
+          <div class="hero__shape hero__shape--2"></div>
+          <div class="hero__shape hero__shape--3"></div>
+        </div>
         <div class="container hero__inner">
           <div class="hero__text">
             <span class="hero__eyebrow">✨ Simulasi Belanja Premium</span>
-            <h1 class="hero__title">Belanja Mewah,<br><span class="hero__title-accent">Tanpa Batas.</span></h1>
-            <p class="hero__desc">Rasakan sensasi checkout barang luxury dan makanan premium tanpa keluar sepeser pun. 100% gratis, 100% seru.</p>
+            <h1 class="hero__title">Rasakan Sensasi<br><span class="hero__title-accent">Belanja Mewah.</span></h1>
+            <p class="hero__desc">Checkout barang luxury dan makanan premium — lengkap dengan kurir, ongkir, dan invoice sungguhan. 100% gratis, 0% nyata.</p>
             <div class="hero__cta">
-              <a href="#/listing/luxury" class="btn btn--primary btn--lg">Belanja Luxury</a>
-              <a href="#/listing/food" class="btn btn--outline btn--lg">Premium Food</a>
+              <a href="#/listing/luxury" class="btn btn--primary btn--lg">✨ Luxury Goods</a>
+              <a href="#/listing/food" class="btn btn--outline btn--lg">🍽 Premium Food</a>
+            </div>
+            <div class="hero__stats">
+              <div class="hero__stat">
+                <span class="hero__stat-num">35+</span>
+                <span class="hero__stat-label">Produk Premium</span>
+              </div>
+              <div class="hero__stat-divider"></div>
+              <div class="hero__stat">
+                <span class="hero__stat-num">8</span>
+                <span class="hero__stat-label">Voucher Gratis</span>
+              </div>
+              <div class="hero__stat-divider"></div>
+              <div class="hero__stat">
+                <span class="hero__stat-num">100%</span>
+                <span class="hero__stat-label">Tanpa Bayar</span>
+              </div>
             </div>
           </div>
           <div class="hero__visual" aria-hidden="true">
             <div class="hero__img-grid">
-              <img src="https://picsum.photos/seed/leather-handbag-black/280/280" alt="" class="hero__img hero__img--1" loading="lazy">
-              <img src="https://picsum.photos/seed/sashimi-platter-japanese/200/200" alt="" class="hero__img hero__img--2" loading="lazy">
-              <img src="https://picsum.photos/seed/luxury-watch-calendar/180/180" alt="" class="hero__img hero__img--3" loading="lazy">
+              <div class="hero__img-card hero__img-card--1">
+                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=280&h=280&fit=crop&q=80" alt="">
+                <div class="hero__img-label">Luxury Bag</div>
+              </div>
+              <div class="hero__img-card hero__img-card--2">
+                <img src="https://images.unsplash.com/photo-1617196034183-421b4917c92d?w=200&h=200&fit=crop&q=80" alt="">
+                <div class="hero__img-label">Premium Sashimi</div>
+              </div>
+              <div class="hero__img-card hero__img-card--3">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=180&h=180&fit=crop&q=80" alt="">
+                <div class="hero__img-label">Luxury Watch</div>
+              </div>
+              <div class="hero__img-card hero__img-card--4">
+                <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=150&h=150&fit=crop&q=80" alt="">
+                <div class="hero__img-label">Artisan Chocolate</div>
+              </div>
             </div>
+          </div>
+        </div>
+        <!-- Marquee strip -->
+        <div class="hero__marquee" aria-hidden="true">
+          <div class="hero__marquee-inner">
+            <span>✨ Luxury Goods</span><span>🍽 Fine Dining</span><span>⌚ Premium Watch</span><span>💎 Perhiasan</span><span>🥩 Wagyu A5</span><span>☕ Specialty Coffee</span><span>👜 Designer Bag</span><span>🍱 Omakase</span><span>💻 UltraBook</span><span>🍰 Artisan Cake</span>
+            <span>✨ Luxury Goods</span><span>🍽 Fine Dining</span><span>⌚ Premium Watch</span><span>💎 Perhiasan</span><span>🥩 Wagyu A5</span><span>☕ Specialty Coffee</span><span>👜 Designer Bag</span><span>🍱 Omakase</span><span>💻 UltraBook</span><span>🍰 Artisan Cake</span>
           </div>
         </div>
       </section>
