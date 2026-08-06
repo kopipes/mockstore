@@ -101,8 +101,8 @@
     const params = [];
 
     if (categorySlug && categorySlug !== 'all') {
-      // Support type filter (luxury / food) or exact slug
-      if (categorySlug === 'luxury' || categorySlug === 'food') {
+      // Support type filter (luxury / food / property) or exact slug
+      if (categorySlug === 'luxury' || categorySlug === 'food' || categorySlug === 'property') {
         sql += ` AND c.type = ?`;
         params.push(categorySlug);
       } else {
@@ -175,7 +175,7 @@
     let sql = `SELECT COUNT(*) AS total FROM products p JOIN categories c ON p.category_id = c.id WHERE 1=1`;
     const params = [];
     if (categorySlug && categorySlug !== 'all') {
-      if (categorySlug === 'luxury' || categorySlug === 'food') {
+      if (categorySlug === 'luxury' || categorySlug === 'food' || categorySlug === 'property') {
         sql += ` AND c.type = ?`; params.push(categorySlug);
       } else {
         sql += ` AND c.slug = ?`; params.push(categorySlug);
