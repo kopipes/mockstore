@@ -11,6 +11,12 @@
   <link rel="stylesheet" href="css/pages.css?v=1786004539" />
 </head>
 <body>
+  <!-- ONLINE COUNTER BAR -->
+  <div class="online-bar" id="online-bar" role="status" aria-live="polite">
+    <span class="online-bar__dot" aria-hidden="true"></span>
+    <span id="online-count">...</span> orang sedang belanja sekarang
+  </div>
+
   <!-- NAVBAR -->
   <header class="navbar" role="banner">
     <div class="navbar__inner container">
@@ -97,6 +103,30 @@
 
   <!-- Scripts -->
   <script src="js/toast.js?v=1786004539"></script>
+  <script>
+    // Online counter — realistic fake fluctuation
+    (function () {
+      const el = document.getElementById('online-count');
+      if (!el) return;
+      // Base count varies by time of day (more during day hours)
+      function baseCount() {
+        const h = new Date().getHours();
+        if (h >= 8 && h < 12) return 180;
+        if (h >= 12 && h < 15) return 240;
+        if (h >= 15 && h < 21) return 320;
+        if (h >= 21 && h < 24) return 210;
+        return 90; // midnight-8am
+      }
+      function update() {
+        const base = baseCount();
+        const delta = Math.floor(Math.random() * 40) - 20;
+        const count = base + delta;
+        el.textContent = count.toLocaleString('id-ID');
+      }
+      update();
+      setInterval(update, 5000);
+    })();
+  </script>
   <script src="js/images.js?v=1786004539"></script>
   <script src="js/theme.js?v=1786004539"></script>
   <script src="js/cart.js?v=1786004539"></script>
