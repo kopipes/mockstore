@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MockStore — Luxury & Premium Food</title>
+  <meta name="description" content="Simulasi belanja barang luxury dan makanan premium. Gratis, tanpa transaksi nyata." />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="navbar__inner container">
+      <a href="#/" class="navbar__logo" aria-label="MockStore Home">
+        <span class="logo-icon">🛍</span>
+        <span class="logo-text">MockStore</span>
+      </a>
+      <nav class="navbar__nav" aria-label="Navigasi utama">
+        <a href="#/" class="nav-link">Home</a>
+        <a href="#/listing/luxury" class="nav-link">Luxury</a>
+        <a href="#/listing/food" class="nav-link">Premium Food</a>
+        <a href="#/orders" class="nav-link">Pesanan</a>
+      </nav>
+      <div class="navbar__actions">
+        <!-- Theme Switcher -->
+        <div class="theme-switcher" role="group" aria-label="Pilih tema">
+          <button class="theme-btn" data-theme="light" title="Tema Terang" aria-label="Tema Terang">☀️</button>
+          <button class="theme-btn" data-theme="dark" title="Tema Gelap" aria-label="Tema Gelap">🌙</button>
+          <button class="theme-btn" data-theme="gold" title="Tema Gold Luxury" aria-label="Tema Gold">✨</button>
+          <button class="theme-btn" data-theme="forest" title="Tema Forest" aria-label="Tema Forest">🌿</button>
+        </div>
+        <!-- Wishlist -->
+        <a href="#/wishlist" class="icon-btn" aria-label="Wishlist">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span class="badge" id="wishlist-badge" aria-live="polite">0</span>
+        </a>
+        <!-- Cart -->
+        <a href="#/cart" class="icon-btn" aria-label="Keranjang belanja">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="badge" id="cart-badge" aria-live="polite">0</span>
+        </a>
+      </div>
+      <!-- Mobile hamburger -->
+      <button class="hamburger" id="hamburger-btn" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="#/" class="mobile-nav-link">Home</a>
+      <a href="#/listing/luxury" class="mobile-nav-link">Luxury</a>
+      <a href="#/listing/food" class="mobile-nav-link">Premium Food</a>
+      <a href="#/orders" class="mobile-nav-link">Pesanan</a>
+      <a href="#/wishlist" class="mobile-nav-link">Wishlist</a>
+      <a href="#/cart" class="mobile-nav-link">Keranjang</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="app" role="main" aria-live="polite">
+    <div class="loading-screen" id="loading-screen" aria-label="Memuat aplikasi">
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Memuat MockStore…</p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo-icon">🛍</span>
+        <strong>MockStore</strong>
+        <p class="footer__tagline">Belanja tanpa batas, tanpa biaya.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#/">Home</a>
+        <a href="#/listing/luxury">Luxury</a>
+        <a href="#/listing/food">Food</a>
+        <a href="#/orders">Riwayat</a>
+        <a href="#/wishlist">Wishlist</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__disclaimer-bar">⚠️ MockStore adalah aplikasi simulasi belanja untuk hiburan semata. Tidak ada transaksi nyata, pengiriman barang, maupun pembayaran yang diproses.</p>
+      <p>© 2026 MockStore — Simulasi belanja, 100% gratis &amp; tanpa risiko.</p>
+    </div>
+  </footer>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast-container" aria-live="assertive" aria-atomic="true"></div>
+
+  <!-- Scripts -->
+  <script src="js/toast.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/orders.js"></script>
+  <script src="js/render/home.js"></script>
+  <script src="js/render/listing.js"></script>
+  <script src="js/render/product-detail.js"></script>
+  <script src="js/render/cart-page.js"></script>
+  <script src="js/render/checkout-page.js"></script>
+  <script src="js/render/invoice.js"></script>
+  <script src="js/render/wishlist-page.js"></script>
+  <script src="js/render/orders-page.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

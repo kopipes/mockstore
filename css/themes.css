@@ -1,0 +1,170 @@
+/* =============================================
+   THEMES.CSS — CSS Custom Properties per tema
+   4 tema: light, dark, gold, forest
+   ============================================= */
+
+/* ===== LIGHT (default) ===== */
+[data-theme="light"] {
+  --color-primary:        #7C3AED;
+  --color-primary-dark:   #5B21B6;
+  --color-primary-subtle: #EDE9FE;
+  --color-primary-rgb:    124, 58, 237;
+
+  --color-bg:             #F9FAFB;
+  --color-surface:        #FFFFFF;
+  --color-surface-2:      #F3F4F6;
+  --color-border:         #E5E7EB;
+  --color-shadow:         rgba(0,0,0,0.08);
+
+  --color-text:           #111827;
+  --color-text-muted:     #6B7280;
+  --color-text-inverse:   #FFFFFF;
+
+  --color-success:        #059669;
+  --color-success-subtle: #ECFDF5;
+  --color-danger:         #DC2626;
+  --color-danger-subtle:  #FEF2F2;
+  --color-warning:        #D97706;
+  --color-warning-subtle: #FFFBEB;
+  --color-info:           #2563EB;
+  --color-info-subtle:    #EFF6FF;
+
+  --color-star:           #F59E0B;
+  --color-overlay:        rgba(0,0,0,0.5);
+
+  /* Product card */
+  --card-shadow:          0 1px 4px rgba(0,0,0,0.07), 0 4px 12px rgba(0,0,0,0.05);
+  --card-shadow-hover:    0 4px 16px rgba(0,0,0,0.12), 0 8px 24px rgba(0,0,0,0.08);
+  --card-radius:          12px;
+
+  /* Button */
+  --btn-primary-bg:       #7C3AED;
+  --btn-primary-text:     #FFFFFF;
+  --btn-primary-hover:    #5B21B6;
+}
+
+/* ===== DARK ===== */
+[data-theme="dark"] {
+  --color-primary:        #A78BFA;
+  --color-primary-dark:   #C4B5FD;
+  --color-primary-subtle: #2D1B69;
+  --color-primary-rgb:    167, 139, 250;
+
+  --color-bg:             #0F0F13;
+  --color-surface:        #1A1A24;
+  --color-surface-2:      #252535;
+  --color-border:         #2E2E42;
+  --color-shadow:         rgba(0,0,0,0.4);
+
+  --color-text:           #F3F4F6;
+  --color-text-muted:     #9CA3AF;
+  --color-text-inverse:   #111827;
+
+  --color-success:        #34D399;
+  --color-success-subtle: #022C22;
+  --color-danger:         #F87171;
+  --color-danger-subtle:  #2D0A0A;
+  --color-warning:        #FCD34D;
+  --color-warning-subtle: #2D1A00;
+  --color-info:           #60A5FA;
+  --color-info-subtle:    #0A1D3D;
+
+  --color-star:           #FCD34D;
+  --color-overlay:        rgba(0,0,0,0.7);
+
+  --card-shadow:          0 1px 4px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.25);
+  --card-shadow-hover:    0 4px 20px rgba(167,139,250,0.15), 0 8px 28px rgba(0,0,0,0.3);
+  --card-radius:          12px;
+
+  --btn-primary-bg:       #7C3AED;
+  --btn-primary-text:     #FFFFFF;
+  --btn-primary-hover:    #A78BFA;
+}
+
+/* ===== GOLD LUXURY ===== */
+[data-theme="gold"] {
+  --color-primary:        #B8860B;
+  --color-primary-dark:   #8B6508;
+  --color-primary-subtle: #FFF8E1;
+  --color-primary-rgb:    184, 134, 11;
+
+  --color-bg:             #FAF6EE;
+  --color-surface:        #FFFDF7;
+  --color-surface-2:      #F5EFE0;
+  --color-border:         #E8D9B0;
+  --color-shadow:         rgba(184,134,11,0.12);
+
+  --color-text:           #2C1A00;
+  --color-text-muted:     #7A6040;
+  --color-text-inverse:   #FFFFFF;
+
+  --color-success:        #2E7D32;
+  --color-success-subtle: #F1F8E9;
+  --color-danger:         #C62828;
+  --color-danger-subtle:  #FFF3E0;
+  --color-warning:        #E65100;
+  --color-warning-subtle: #FFF3E0;
+  --color-info:           #1565C0;
+  --color-info-subtle:    #E3F2FD;
+
+  --color-star:           #B8860B;
+  --color-overlay:        rgba(44,26,0,0.5);
+
+  --card-shadow:          0 2px 8px rgba(184,134,11,0.1), 0 4px 16px rgba(0,0,0,0.06);
+  --card-shadow-hover:    0 6px 24px rgba(184,134,11,0.2), 0 8px 32px rgba(0,0,0,0.1);
+  --card-radius:          10px;
+
+  --btn-primary-bg:       #B8860B;
+  --btn-primary-text:     #FFFFFF;
+  --btn-primary-hover:    #8B6508;
+}
+
+/* ===== FOREST ===== */
+[data-theme="forest"] {
+  --color-primary:        #166534;
+  --color-primary-dark:   #14532D;
+  --color-primary-subtle: #DCFCE7;
+  --color-primary-rgb:    22, 101, 52;
+
+  --color-bg:             #F0FDF4;
+  --color-surface:        #FFFFFF;
+  --color-surface-2:      #DCFCE7;
+  --color-border:         #BBF7D0;
+  --color-shadow:         rgba(22,101,52,0.1);
+
+  --color-text:           #052E16;
+  --color-text-muted:     #4B7A5E;
+  --color-text-inverse:   #FFFFFF;
+
+  --color-success:        #15803D;
+  --color-success-subtle: #DCFCE7;
+  --color-danger:         #DC2626;
+  --color-danger-subtle:  #FEF2F2;
+  --color-warning:        #CA8A04;
+  --color-warning-subtle: #FEFCE8;
+  --color-info:           #0369A1;
+  --color-info-subtle:    #E0F2FE;
+
+  --color-star:           #CA8A04;
+  --color-overlay:        rgba(5,46,22,0.5);
+
+  --card-shadow:          0 1px 4px rgba(22,101,52,0.07), 0 4px 12px rgba(22,101,52,0.05);
+  --card-shadow-hover:    0 4px 16px rgba(22,101,52,0.15), 0 8px 24px rgba(22,101,52,0.08);
+  --card-radius:          12px;
+
+  --btn-primary-bg:       #166534;
+  --btn-primary-text:     #FFFFFF;
+  --btn-primary-hover:    #14532D;
+}
+
+/* ===== Transition on theme switch ===== */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+}
+
+/* Exclude transitions that interfere with animations */
+.spinner, .skeleton, .toast, .modal, [data-no-transition] {
+  transition: none !important;
+}
