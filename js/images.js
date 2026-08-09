@@ -42,12 +42,12 @@
     'belt-ostrich-3':    'belt-ostrich-3',
 
     // ── Sepatu Mewah ───────────────────────────────────────────
-    'shoe-stiletto-1':   'shoes',
-    'shoe-oxford-2':     'shoe-a',
-    'shoe-sneaker-3':    'shoes',
-    'shoe-loafer-4':     'shoe-a',
-    'shoe-boot-5':       'shoes',
-    'shoe-sandal-6':     'shoe-a',
+    'shoe-stiletto-1':   'shoe-stiletto-1',
+    'shoe-oxford-2':     'shoe-oxford-2',
+    'shoe-sneaker-3':    'shoe-sneaker-3',
+    'shoe-loafer-4':     'shoe-loafer-4',
+    'shoe-boot-5':       'shoe-boot-5',
+    'shoe-sandal-6':     'shoe-sandal-6',
 
     // ── Parfum Premium ─────────────────────────────────────────
     'perfume-noir-1':    'perfume-noir-1',
