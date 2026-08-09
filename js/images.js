@@ -32,9 +32,9 @@
     'monitor-oled-6':    'monitor-oled-6',
 
     // ── Perhiasan ──────────────────────────────────────────────
-    'ring-diamond-1':    'jewelry',
-    'bangle-gold-2':     'jewelry',
-    'necklace-pearl-3':  'jewelry',
+    'ring-diamond-1':    'ring-diamond-1',
+    'bangle-gold-2':     'bangle-gold-2',
+    'necklace-pearl-3':  'necklace-pearl-3',
 
     // ── Aksesori ───────────────────────────────────────────────
     'sunglass-1':        'sunglasses',
