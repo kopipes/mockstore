@@ -58,12 +58,12 @@
     'perfume-aqua-6':    'jewelry',
 
     // ── Pakaian Luxury ─────────────────────────────────────────
-    'cloth-cashmere-1':  'clothes',
-    'cloth-suit-2':      'clothes-a',
-    'cloth-silk-3':      'clothes',
-    'cloth-trench-4':    'clothes-a',
-    'cloth-denim-5':     'clothes',
-    'cloth-linen-6':     'clothes-a',
+    'cloth-cashmere-1':  'cloth-cashmere-1',
+    'cloth-suit-2':      'cloth-suit-2',
+    'cloth-silk-3':      'cloth-silk-3',
+    'cloth-trench-4':    'cloth-trench-4',
+    'cloth-denim-5':     'cloth-denim-5',
+    'cloth-linen-6':     'cloth-linen-6',
 
     // ── Fine Dining ────────────────────────────────────────────
     'dining-prestige-1': 'dining',
