@@ -23,7 +23,7 @@
 
   function renderStep() {
     MockRenderPage(`
-      <div class="container page" style="max-width:860px">
+      <div class="container page page--checkout" style="max-width:860px">
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <a href="#/">Home</a>
           <span class="breadcrumb__sep">›</span>
@@ -94,8 +94,8 @@
           </details>
         ` : renderAddressForm()}
 
-        <div style="margin-top:1.5rem">
-          <button class="btn btn--primary btn--lg" id="btn-next-courier">Pilih Kurir →</button>
+        <div class="checkout-step__actions">
+          <button class="btn btn--primary btn--lg btn--full-mobile" id="btn-next-courier">Pilih Kurir →</button>
         </div>
       </div>`;
   }
@@ -170,9 +170,9 @@
             </label>
           `).join('')}
         </div>
-        <div style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap">
+        <div class="checkout-step__actions">
           <button class="btn btn--ghost" id="btn-back-address">← Kembali</button>
-          <button class="btn btn--primary btn--lg" id="btn-next-payment">Pilih Pembayaran →</button>
+          <button class="btn btn--primary btn--lg btn--full-mobile" id="btn-next-payment">Pilih Pembayaran →</button>
         </div>
       </div>`;
   }
@@ -218,9 +218,9 @@
           <div id="voucher-status"></div>
         </div>
 
-        <div style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap">
+        <div class="checkout-step__actions">
           <button class="btn btn--ghost" id="btn-back-courier">← Kembali</button>
-          <button class="btn btn--primary btn--lg" id="btn-next-summary">Lihat Ringkasan →</button>
+          <button class="btn btn--primary btn--lg btn--full-mobile" id="btn-next-summary">Lihat Ringkasan →</button>
         </div>
       </div>`;
   }
@@ -291,9 +291,9 @@
             </div>` : ''}
         </div>
 
-        <div style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap">
+        <div class="checkout-step__actions">
           <button class="btn btn--ghost" id="btn-back-payment">← Kembali</button>
-          <button class="btn btn--primary btn--lg" id="btn-place-order">🎉 Pesan Sekarang (Simulasi)</button>
+          <button class="btn btn--primary btn--lg btn--full-mobile" id="btn-place-order">🎉 Pesan Sekarang (Simulasi)</button>
         </div>
       </div>`;
   }
