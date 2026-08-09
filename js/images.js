@@ -9,27 +9,27 @@
     'bag-noir-1':        'bag-noir',
     'bag-camel-2':       'bag-camel',
     'bag-burgundy-3':    'bag-dark',
-    'bag-rose-4':        'bag-noir',
+    'bag-rose-4':        'bag-rose-4',
     'bag-cognac-5':      'bag-cognac',
-    'bag-duffle-6':      'bag-cognac',
-    'bag-chain-7':       'bag-noir',
-    'bag-backpack-8':    'bag-camel',
+    'bag-duffle-6':      'bag-duffle-6',
+    'bag-chain-7':       'bag-chain-7',
+    'bag-backpack-8':    'bag-backpack-8',
 
     // ── Jam Tangan ─────────────────────────────────────────────
     'watch-perp-1':      'watch-1',
     'watch-rg-2':        'watch-2',
     'watch-dive-3':      'watch-3',
-    'watch-avi-4':       'watch-1',
-    'watch-tourbillon-5':'watch-2',
-    'watch-field-6':     'watch-3',
+    'watch-avi-4':       'watch-avi-4',
+    'watch-tourbillon-5':'watch-tourbillon-5',
+    'watch-field-6':     'watch-field-6',
 
     // ── Elektronik ─────────────────────────────────────────────
     'laptop-carbon-1':   'laptop-1',
     'laptop-gaming-2':   'laptop-gaming',
     'tablet-studio-3':   'tablet',
     'headphone-anc-4':   'headphone',
-    'earbuds-anc-5':     'headphone',
-    'monitor-oled-6':    'laptop-1',
+    'earbuds-anc-5':     'earbuds-anc-5',
+    'monitor-oled-6':    'monitor-oled-6',
 
     // ── Perhiasan ──────────────────────────────────────────────
     'ring-diamond-1':    'jewelry',
@@ -39,7 +39,7 @@
     // ── Aksesori ───────────────────────────────────────────────
     'sunglass-1':        'sunglasses',
     'wallet-croco-2':    'wallet',
-    'belt-ostrich-3':    'wallet',
+    'belt-ostrich-3':    'belt-ostrich-3',
 
     // ── Sepatu Mewah ───────────────────────────────────────────
     'shoe-stiletto-1':   'shoes',
@@ -50,12 +50,12 @@
     'shoe-sandal-6':     'shoe-a',
 
     // ── Parfum Premium ─────────────────────────────────────────
-    'perfume-noir-1':    'jewelry',
-    'perfume-blanc-2':   'jewelry',
-    'perfume-bois-3':    'jewelry',
-    'perfume-rose-4':    'jewelry',
-    'perfume-oud-5':     'jewelry',
-    'perfume-aqua-6':    'jewelry',
+    'perfume-noir-1':    'perfume-noir-1',
+    'perfume-blanc-2':   'perfume-blanc-2',
+    'perfume-bois-3':    'perfume-bois-3',
+    'perfume-rose-4':    'perfume-rose-4',
+    'perfume-oud-5':     'perfume-oud-5',
+    'perfume-aqua-6':    'perfume-aqua-6',
 
     // ── Pakaian Luxury ─────────────────────────────────────────
     'cloth-cashmere-1':  'cloth-cashmere-1',
@@ -81,12 +81,12 @@
     'food-white-truffle-6': 'truffle',
 
     // ── Wine & Spirits ─────────────────────────────────────────
-    'wine-margaux-1':    'dining',
-    'wine-dom-2':        'tea',
-    'whisky-yamazaki-3': 'coffee',
-    'cognac-hennessy-4': 'coffee',
-    'wine-barolo-5':     'dining',
-    'tequila-clase-6':   'coffee',
+    'wine-margaux-1':    'wine-margaux-1',
+    'wine-dom-2':        'wine-dom-2',
+    'whisky-yamazaki-3': 'whisky-yamazaki-3',
+    'cognac-hennessy-4': 'cognac-hennessy-4',
+    'wine-barolo-5':     'wine-barolo-5',
+    'tequila-clase-6':   'tequila-clase-6',
 
     // ── Kafe Premium ───────────────────────────────────────────
     'coffee-geisha-1':   'coffee',
@@ -96,18 +96,18 @@
     // ── Seafood Premium ────────────────────────────────────────
     'seafood-lobster-1': 'seafood',
     'seafood-crab-2':    'seafood-b',
-    'seafood-salmon-3':  'seafood',
-    'seafood-scallop-4': 'seafood-b',
-    'seafood-prawn-5':   'seafood',
-    'seafood-uni-6':     'seafood-b',
+    'seafood-salmon-3':  'seafood-salmon-3',
+    'seafood-scallop-4': 'seafood-scallop-4',
+    'seafood-prawn-5':   'seafood-prawn-5',
+    'seafood-uni-6':     'seafood-uni-6',
 
     // ── Artisan Bread ──────────────────────────────────────────
-    'bread-sourdough-1': 'pastry',
-    'bread-croissant-2': 'pastry',
-    'bread-campagne-3':  'pastry',
-    'bread-focaccia-4':  'pastry',
-    'bread-danish-5':    'pastry',
-    'bread-bagel-6':     'pastry',
+    'bread-sourdough-1': 'bread-sourdough-1',
+    'bread-croissant-2': 'bread-croissant-2',
+    'bread-campagne-3':  'bread-campagne-3',
+    'bread-focaccia-4':  'bread-focaccia-4',
+    'bread-danish-5':    'bread-danish-5',
+    'bread-bagel-6':     'bread-bagel-6',
 
     // ── Sushi & Omakase ────────────────────────────────────────
     'food-sashimi-1':    'sashimi',
@@ -123,14 +123,14 @@
 
     // ── Properti: Rumah Mewah ──────────────────────────────────
     'prop-rumah-1':      'prop-rumah-1',
-    'prop-rumah-2':      'prop-rumah-1',
-    'prop-rumah-3':      'prop-rumah-1',
+    'prop-rumah-2':      'prop-rumah-2',
+    'prop-rumah-3':      'prop-rumah-3',
     'prop-rumah-4':      'prop-rumah-5',
     'prop-rumah-5':      'prop-rumah-5',
 
     // ── Properti: Villa & Resort ───────────────────────────────
     'prop-villa-1':      'prop-villa-1',
-    'prop-villa-2':      'prop-villa-1',
+    'prop-villa-2':      'prop-villa-2',
     'prop-villa-3':      'prop-villa-4',
     'prop-villa-4':      'prop-villa-4',
 
@@ -142,13 +142,13 @@
 
     // ── Properti: Tanah Kavling ────────────────────────────────
     'prop-tanah-1':      'prop-tanah-1',
-    'prop-tanah-2':      'prop-tanah-1',
-    'prop-tanah-3':      'prop-tanah-1',
+    'prop-tanah-2':      'prop-tanah-2',
+    'prop-tanah-3':      'prop-tanah-3',
 
     // ── Properti: Komersial ────────────────────────────────────
     'prop-komersial-1':  'prop-komersial-1',
-    'prop-komersial-2':  'prop-apt-1',
-    'prop-komersial-3':  'prop-villa-1',
+    'prop-komersial-2':  'prop-komersial-2',
+    'prop-komersial-3':  'prop-komersial-3',
   };
 
   function getUrl(seed, w = 400, h = 400) {
