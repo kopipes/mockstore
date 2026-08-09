@@ -1,45 +1,178 @@
-/* ============ images.js — Product image mapping (Hybrid Local + Online Fallback) ============ */
+/* ============ images.js — Product image mapping (Local files only) ============ */
 (function () {
 
   const BASE = 'assets/products/';
 
-  // Realistic online Unsplash photo IDs for products
-  const FALLBACK_MAP = {
-    'bangle-gold-2':     '1611591437268-301c67a4b3e2', // Gold bangle
-    'bread-bagel-6':     '1585478246843-7f386ee37d7b', // Bagels
-    'bread-focaccia-4':  '1573140249602-d73b22b1a03a', // Focaccia
-    'food-bento-2':      '1628169979504-7669d0d47348', // Bento box
-    'food-choco-1':      '1548907040-5e1e24126a01', // Chocolate box
-    'food-foiegras-3':   '1600891964599-7b13d585087a', // Foie gras
-    'food-unidon-5':     '1628169979504-7669d0d47348', // Uni Don bowl
-    'laptop-gaming-2':   '1603302576837-37561b2fe53b', // Gaming laptop
-    'perfume-noir-1':    '1547887535-c1e1507f30de', // Noir perfume
-    'perfume-bois-3':    '1547887535-c1e1507f30de', // Bois perfume
-    'perfume-oud-5':     '1547887535-c1e1507f30de', // Oud perfume
-    'prop-apt-1':        '1502672260266-0a15844107ef', // Penthouse
-    'prop-komersial-2':  '1497250681960-0a168f47e24b', // Office space
-    'prop-rumah-3':      '1613490493576-4d0d0d9c35a9', // BSD house
-    'prop-villa-1':      '1540555700-4786de136d41', // Cliff villa
-    'prop-villa-3':      '1439066615861-20a782b136ef', // Overwater villa
-    'seafood-lobster-1': '1553618551-f768da530d73', // Lobster
-    'seafood-scallop-4': '1532550900-c8f08679d7bc', // Scallop
-    'wallet-croco-2':    '1627123424574-f67f2702e14a', // Croco wallet
-    'prop-komersial-3':  '1566073771279-6a58a6f40b2a'  // Hotel
+  // All seeds mapped to local files in assets/products/
+  const IMAGE_MAP = {
+    // ── Tas Mewah ──────────────────────────────────────────────
+    'bag-noir-1':        'bag-noir',
+    'bag-camel-2':       'bag-camel',
+    'bag-burgundy-3':    'bag-dark',
+    'bag-rose-4':        'bag-noir',
+    'bag-cognac-5':      'bag-cognac',
+    'bag-duffle-6':      'bag-cognac',
+    'bag-chain-7':       'bag-noir',
+    'bag-backpack-8':    'bag-camel',
+
+    // ── Jam Tangan ─────────────────────────────────────────────
+    'watch-perp-1':      'watch-1',
+    'watch-rg-2':        'watch-2',
+    'watch-dive-3':      'watch-3',
+    'watch-avi-4':       'watch-1',
+    'watch-tourbillon-5':'watch-2',
+    'watch-field-6':     'watch-3',
+
+    // ── Elektronik ─────────────────────────────────────────────
+    'laptop-carbon-1':   'laptop-1',
+    'laptop-gaming-2':   'laptop-gaming',
+    'tablet-studio-3':   'tablet',
+    'headphone-anc-4':   'headphone',
+    'earbuds-anc-5':     'headphone',
+    'monitor-oled-6':    'laptop-1',
+
+    // ── Perhiasan ──────────────────────────────────────────────
+    'ring-diamond-1':    'jewelry',
+    'bangle-gold-2':     'jewelry',
+    'necklace-pearl-3':  'jewelry',
+
+    // ── Aksesori ───────────────────────────────────────────────
+    'sunglass-1':        'sunglasses',
+    'wallet-croco-2':    'wallet',
+    'belt-ostrich-3':    'wallet',
+
+    // ── Sepatu Mewah ───────────────────────────────────────────
+    'shoe-stiletto-1':   'shoes',
+    'shoe-oxford-2':     'shoe-a',
+    'shoe-sneaker-3':    'shoes',
+    'shoe-loafer-4':     'shoe-a',
+    'shoe-boot-5':       'shoes',
+    'shoe-sandal-6':     'shoe-a',
+
+    // ── Parfum Premium ─────────────────────────────────────────
+    'perfume-noir-1':    'jewelry',
+    'perfume-blanc-2':   'jewelry',
+    'perfume-bois-3':    'jewelry',
+    'perfume-rose-4':    'jewelry',
+    'perfume-oud-5':     'jewelry',
+    'perfume-aqua-6':    'jewelry',
+
+    // ── Pakaian Luxury ─────────────────────────────────────────
+    'cloth-cashmere-1':  'clothes',
+    'cloth-suit-2':      'clothes-a',
+    'cloth-silk-3':      'clothes',
+    'cloth-trench-4':    'clothes-a',
+    'cloth-denim-5':     'clothes',
+    'cloth-linen-6':     'clothes-a',
+
+    // ── Fine Dining ────────────────────────────────────────────
+    'dining-prestige-1': 'dining',
+    'dining-omakase-2':  'omakase',
+    'dining-tea-3':      'tea',
+    'dining-wagyu-4':    'omakase',
+    'dining-wine-5':     'dining',
+
+    // ── Gourmet ────────────────────────────────────────────────
+    'food-wagyu-1':      'wagyu',
+    'food-truffle-2':    'truffle',
+    'food-foiegras-3':   'foiegras',
+    'food-caviar-4':     'foiegras',
+    'food-iberico-5':    'wagyu',
+    'food-white-truffle-6': 'truffle',
+
+    // ── Wine & Spirits ─────────────────────────────────────────
+    'wine-margaux-1':    'dining',
+    'wine-dom-2':        'tea',
+    'whisky-yamazaki-3': 'coffee',
+    'cognac-hennessy-4': 'coffee',
+    'wine-barolo-5':     'dining',
+    'tequila-clase-6':   'coffee',
+
+    // ── Kafe Premium ───────────────────────────────────────────
+    'coffee-geisha-1':   'coffee',
+    'coffee-luwak-2':    'beans',
+    'food-macaron-3':    'pastry',
+
+    // ── Seafood Premium ────────────────────────────────────────
+    'seafood-lobster-1': 'seafood',
+    'seafood-crab-2':    'seafood-b',
+    'seafood-salmon-3':  'seafood',
+    'seafood-scallop-4': 'seafood-b',
+    'seafood-prawn-5':   'seafood',
+    'seafood-uni-6':     'seafood-b',
+
+    // ── Artisan Bread ──────────────────────────────────────────
+    'bread-sourdough-1': 'pastry',
+    'bread-croissant-2': 'pastry',
+    'bread-campagne-3':  'pastry',
+    'bread-focaccia-4':  'pastry',
+    'bread-danish-5':    'pastry',
+    'bread-bagel-6':     'pastry',
+
+    // ── Sushi & Omakase ────────────────────────────────────────
+    'food-sashimi-1':    'sashimi',
+    'food-bento-2':      'bento',
+    'food-dragon-3':     'sushi-roll',
+    'food-toro-4':       'sashimi',
+    'food-unidon-5':     'bento',
+
+    // ── Dessert ────────────────────────────────────────────────
+    'food-choco-1':      'chocolate',
+    'food-opera-2':      'cake',
+    'food-mille-3':      'pastry',
+
+    // ── Properti: Rumah Mewah ──────────────────────────────────
+    'prop-rumah-1':      'prop-rumah-1',
+    'prop-rumah-2':      'prop-rumah-1',
+    'prop-rumah-3':      'prop-rumah-1',
+    'prop-rumah-4':      'prop-rumah-5',
+    'prop-rumah-5':      'prop-rumah-5',
+
+    // ── Properti: Villa & Resort ───────────────────────────────
+    'prop-villa-1':      'prop-villa-1',
+    'prop-villa-2':      'prop-villa-1',
+    'prop-villa-3':      'prop-villa-4',
+    'prop-villa-4':      'prop-villa-4',
+
+    // ── Properti: Apartemen ────────────────────────────────────
+    'prop-apt-1':        'prop-apt-1',
+    'prop-apt-2':        'prop-apt-2',
+    'prop-apt-3':        'prop-apt-3',
+    'prop-apt-4':        'prop-apt-4',
+
+    // ── Properti: Tanah Kavling ────────────────────────────────
+    'prop-tanah-1':      'prop-tanah-1',
+    'prop-tanah-2':      'prop-tanah-1',
+    'prop-tanah-3':      'prop-tanah-1',
+
+    // ── Properti: Komersial ────────────────────────────────────
+    'prop-komersial-1':  'prop-komersial-1',
+    'prop-komersial-2':  'prop-apt-1',
+    'prop-komersial-3':  'prop-villa-1',
   };
 
-  const EMPTY_SEEDS = new Set(Object.keys(FALLBACK_MAP));
-
   function getUrl(seed, w = 400, h = 400) {
-    if (EMPTY_SEEDS.has(seed)) {
-      const id = FALLBACK_MAP[seed];
-      return `https://images.unsplash.com/photo-${id}?w=${w}&h=${h}&fit=crop&q=80`;
-    }
-    return `${BASE}${seed}.jpg`;
+    const filename = IMAGE_MAP[String(seed)];
+    if (filename) return `${BASE}${filename}.jpg`;
+    // Fallback SVG for unknown seeds
+    return generateSvg(seed);
   }
 
   function getGallery(seed, w = 600, h = 600) {
     const url = getUrl(seed, w, h);
     return [url, url, url, url];
+  }
+
+  function generateSvg(seed) {
+    const colors = ['#2c3e50','#8b4513','#1a6b3a','#4a1a6b','#1a3a6b','#6b1a1a'];
+    const icons  = ['🛍️','✨','💎','🌿','👑','🏆'];
+    const idx = Math.abs(String(seed).charCodeAt(0)) % colors.length;
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+      <rect width="400" height="400" fill="${colors[idx]}"/>
+      <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        font-size="120" font-family="Segoe UI Emoji,sans-serif">${icons[idx]}</text>
+    </svg>`;
+    return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
   }
 
   window.MockImages = { getUrl, getGallery };
